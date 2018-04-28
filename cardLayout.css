@@ -1,0 +1,107 @@
+/* CardLayout CSS */
+.cardLayout
+{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+    display: inline-block;
+    height: 300px;
+    width: calc(100% - 20px);
+    max-width: 700px;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    margin: 10px;
+    overflow: visible;
+    cursor: pointer;
+}
+.cardLayout > .rel
+{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(0) translate3d(0,0,0);
+    -moz-transform: rotateX(0) translate3d(0,0,0);
+    -ms-transform: rotateX(0) translate3d(0,0,0);
+    -o-transform: rotateX(0) translate3d(0,0,0);
+    transform: rotateX(0) translate3d(0,0,0);
+}
+.cardLayout  .front
+{
+    font-size: 15px;
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.cardLayout  .back
+{
+    font-size: 15px;
+    position: absolute;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.cardLayout .contHolder
+{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    transition-duration: 0.4s;
+}
+.cardLayout.loading, .cardLayout.flipped
+{
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.cardLayout.flipped .front
+{
+	opacity: 0;
+}
+.cardLayout.flipped .front .contHolder
+{
+	opacity: 0;
+}
+/* CardLayout CSS ends here */
